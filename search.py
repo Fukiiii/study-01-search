@@ -19,12 +19,9 @@ def search():
       print("残念！{}はハズレです。でも次回以降にグッズを用意しておきます！".format(word))
       source.append(word)
 
-
-if __name__ == "__main__":
-    search()
-
-# print(source)
-
 with open("source.csv", "w", encoding="Shift_jis") as f: # 文字コードをShift_JISに指定
   writer = csv.writer(f) # writerオブジェクトの作成 改行記号で行を区切る
   writer.writerows(source) # csvファイルに書き込み
+
+if __name__ == "__main__":
+    search()
